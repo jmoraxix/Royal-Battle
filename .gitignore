@@ -10,11 +10,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/Royal Batttle - Cient/nbproject/private/
-/Royal Batttle - Cient-Preloader/nbproject/private/
-/RoyalBattle - Client/nbproject/private/
-/RoyalBattle - Client/dist/
-/RoyalBattle - Client/build/
+/RoyalBatttle/nbproject/private/
+/RoyalBattle/nbproject/private/
+/RoyalBattle/dist/
+/RoyalBattle/build/
 
 # Ignoring OS files
 .DS_Store
@@ -272,3 +271,5 @@ paket-files/
 .idea/
 *.sln.iml
 /RoyalBattle/nbproject/private/
+/RoyalBattle/build/
+/RoyalBattle/dist/
