@@ -11,7 +11,7 @@
  * Royal Battle - Client Side
  * Tercer cuatrimestre, 2016
  */
-package royalbattle.Entities;
+package royalbattle.entities;
 
 import java.util.ArrayList;
 

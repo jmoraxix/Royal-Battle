@@ -11,25 +11,31 @@
  * Royal Battle - Client Side
  * Tercer cuatrimestre, 2016
  */
-package royalbattle.Entities;
-
-import java.util.ArrayList;
+package royalbattle.entities;
 
 /**
  *
  * @author fabian
  */
-public class Partida {
-    
-    private ArrayList<Jugador> jugadores;
+public class Barco {
 
-    public ArrayList<Jugador> getJugadores() {
-        return jugadores;
+    private int size;
+    private boolean drown;
+
+    public int getSize() {
+        return size;
     }
 
-    public void setJugadores(ArrayList<Jugador> jugadores) {
-        this.jugadores = jugadores;
+    public void setSize(int size) {
+        this.size = size;
     }
-    
+
+    public boolean isDrown() {
+        return drown;
+    }
+
+    public void setDrown(boolean drown) {
+        this.drown = drown;
+    }
     
 }
