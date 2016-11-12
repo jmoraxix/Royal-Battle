@@ -5,10 +5,9 @@
  * José David Mora Loría
  * Luis Alberto Nuñez Reyes
  * Roiner Andres Piedra Madrigal
- * Manuel Alejandro Torres Palomo
- * Fabian Villalobos Hernandez
+ * Fabian Andres Vargas Chavarria
  * 
- * Royal Battle - Client Side
+ * Royal Battle
  * Tercer cuatrimestre, 2016
  */
 package royalbattle.entities;
@@ -37,5 +36,5 @@ public class Barco {
     public void setDrown(boolean drown) {
         this.drown = drown;
     }
-    
+
 }

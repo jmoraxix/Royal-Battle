@@ -5,10 +5,9 @@
  * José David Mora Loría
  * Luis Alberto Nuñez Reyes
  * Roiner Andres Piedra Madrigal
- * Manuel Alejandro Torres Palomo
- * Fabian Villalobos Hernandez
+ * Fabian Andres Vargas Chavarria
  * 
- * Royal Battle - Client Side
+ * Royal Battle
  * Tercer cuatrimestre, 2016
  */
 package royalbattle.entities;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
  * @author fabian
  */
 public class Partida {
-    
+
     private ArrayList<Jugador> jugadores;
 
     public ArrayList<Jugador> getJugadores() {
@@ -30,6 +29,5 @@ public class Partida {
     public void setJugadores(ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
     }
-    
-    
+
 }
