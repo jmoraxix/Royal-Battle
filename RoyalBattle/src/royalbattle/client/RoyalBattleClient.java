@@ -5,10 +5,9 @@
  * José David Mora Loría
  * Luis Alberto Nuñez Reyes
  * Roiner Andres Piedra Madrigal
- * Manuel Alejandro Torres Palomo
- * Fabian Villalobos Hernandez
+ * Fabian Andres Vargas Chavarria
  * 
- * Royal Battle - Client Side
+ * Royal Battle
  * Tercer cuatrimestre, 2016
  */
 package royalbattle.client;
@@ -24,11 +23,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import royalbattle.client.util.Util;
 
 /**
  *
@@ -39,61 +35,59 @@ public class RoyalBattleClient extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        stage.setMaxHeight(Util.HEIGHT);
+        stage.setMaxWidth(Util.WIDTH);
+        stage.setMinHeight(Util.HEIGHT);
+        stage.setMinWidth(Util.WIDTH);
+
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Scene scene = new Scene(grid, 300, 275);
+        Scene scene = new Scene(grid, Util.WIDTH, Util.HEIGHT);
         stage.setScene(scene);
 
-        Text scenetitle = new Text("¡aBienvenido!");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        Label scenetitle = new Label("¡Bienvenido!");
+        scenetitle.setId("titulo1");
         grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("Ingrese su nombre de usuario:");
-        grid.add(userName, 0, 1);
+        grid.add(userName, 0, 1, 2, 1);
 
         TextField userTextField = new TextField();
-        grid.add(userTextField, 1, 1);
+        grid.add(userTextField, 2, 1);
 
-        Button btn = new Button("Sign in");
-        HBox hbBtn = new HBox(10);
-        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().add(btn);
-        grid.add(hbBtn, 1, 4);
+        Button btnCrearPartida = new Button("Partida nueva");
+        HBox hbBtnCP = new HBox(15);
+        hbBtnCP.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtnCP.getChildren().add(btnCrearPartida);
+        grid.add(hbBtnCP, 0, 4);
 
-        final Text actiontarget = new Text();
-        grid.add(actiontarget, 1, 6);
-
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-
+        btnCrearPartida.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                actiontarget.setFill(Color.FIREBRICK);
-                actiontarget.setText("Sign in button pressed");
+                // new Partida().launch();
             }
         });
 
-        Button btn2 = new Button("test");
-        btn2.getStyleClass().add("button2");
-        HBox hbBtn2 = new HBox(10);
-        hbBtn2.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn2.getChildren().add(btn2);
-        grid.add(hbBtn2, 1, 5);
+        Button btnIngresarPartida = new Button("Ingresar a partida");
+        HBox hbBtnIP = new HBox(15);
+        hbBtnIP.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtnIP.getChildren().add(btnIngresarPartida);
+        grid.add(hbBtnIP, 3, 4);
 
-        stage.setTitle("Hello World!");
+        btnIngresarPartida.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+            }
+        });
+
+        stage.setTitle("Royal Battle");
         stage.setScene(scene);
+        scene.getStylesheets().add(RoyalBattleClient.class.getResource("view/css/base.css").toExternalForm());
         scene.getStylesheets().add(RoyalBattleClient.class.getResource("view/css/login.css").toExternalForm());
         stage.show();
     }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
-
 }

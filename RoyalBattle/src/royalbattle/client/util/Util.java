@@ -10,11 +10,15 @@
  * Royal Battle
  * Tercer cuatrimestre, 2016
  */
-/* 
-    Created on : 13/09/2016, 08:54:23 PM
-    Author     : jmora
-*/
+package royalbattle.client.util;
 
-.button:hover {
-    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+/**
+ *
+ * @author jmora
+ */
+public class Util {
+
+    public static final double HEIGHT = 734;
+    public static final double WIDTH = 1024;
+
 }

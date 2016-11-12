@@ -1,7 +1,38 @@
 /*
- * Empty Stylesheet file.
+ * Programacion Concurrente Cliente Servidor
+ * 
+ * Ricardo Jimenez Rugama
+ * José David Mora Loría
+ * Luis Alberto Nuñez Reyes
+ * Roiner Andres Piedra Madrigal
+ * Fabian Andres Vargas Chavarria
+ * 
+ * Royal Battle
+ * Tercer cuatrimestre, 2016
  */
 
-.mainFxmlClass {
+.root {
+    -fx-background-image: url("../fondo.jpeg");
+}
 
+.lable, .button {
+    -fx-font-family: "Tahoma";
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#titulo1 {
+    -fx-font-family: "Tahoma";
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
 }
