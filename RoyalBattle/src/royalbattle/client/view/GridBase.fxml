@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/royalbattle/client/view/css/gridbase.css"/>
+    </stylesheets>
+</AnchorPane>
+-->
+<GridPane fx:id="gradibase" prefHeight="800" prefWidth="800" xmlns:fx="http://javafx.com/fxml" styleClass="mainFxmlClass">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="NEVER" minWidth="100.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+        <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+    </rowConstraints>
+</GridPane>
