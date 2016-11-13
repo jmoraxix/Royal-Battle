@@ -12,6 +12,7 @@
  */
 package royalbattle.client;
 
+import java.util.Optional;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,11 +22,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import royalbattle.client.util.Util;
 
@@ -71,14 +70,8 @@ public class RoyalBattleClient extends Application {
         btnCrearPartida.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                final Stage dialog = new Stage();
-                dialog.initModality(Modality.APPLICATION_MODAL);
-                dialog.initOwner(stage);
-                VBox dialogVbox = new VBox(20);
-                dialogVbox.getChildren().add(new Text("This is a Dialog"));
-                Scene dialogScene = new Scene(dialogVbox, 300, 200);
-                dialog.setScene(dialogScene);
-                dialog.show();
+                String nombreServidor = createDialog("Crear servidor", "Ingrese el nombre del servidor a crear:");
+                System.out.println(nombreServidor);
             }
         });
 
@@ -91,6 +84,8 @@ public class RoyalBattleClient extends Application {
         btnIngresarPartida.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
+                String nombreServidor = createDialog("Unirse a servidor", "Ingrese el nombre del servidor a unirse:");
+                System.out.println(nombreServidor);
             }
         });
 
@@ -99,5 +94,24 @@ public class RoyalBattleClient extends Application {
         scene.getStylesheets().add(RoyalBattleClient.class.getResource("view/css/base.css").toExternalForm());
         scene.getStylesheets().add(RoyalBattleClient.class.getResource("view/css/login.css").toExternalForm());
         stage.show();
+    }
+
+    private String createDialog(String titulo, String contenido) {
+
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle(titulo);
+        dialog.setHeaderText(contenido);
+
+        String entered = "";
+
+        while (entered.equals("")) {
+            Optional<String> result = dialog.showAndWait();
+
+            if (result.isPresent()) {
+                entered = result.get();
+            }
+        }
+
+        return entered;
     }
 }

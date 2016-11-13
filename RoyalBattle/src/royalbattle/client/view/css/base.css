@@ -13,6 +13,8 @@
 
 .root {
     -fx-background-image: url("../fondo.jpeg");
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 14px;
 }
 
 .lable, .button {
@@ -30,9 +32,17 @@
     -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
 
 #titulo1 {
     -fx-font-family: "Tahoma";
     -fx-font-weight: bold;
     -fx-font-size: 20px;
+}
+#titulo2 {
+    -fx-font-family: "Tahoma";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
 }

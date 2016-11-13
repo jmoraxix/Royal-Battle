@@ -14,7 +14,3 @@
     Created on : 13/09/2016, 08:54:23 PM
     Author     : jmora
 */
-
-.button:hover {
-    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
-}
