@@ -1,0 +1,16 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Programacion Concurrente Cliente Servidor
+${licensePrefix}
+${licensePrefix}Ricardo Jimenez Rugama
+${licensePrefix}José David Mora Loría
+${licensePrefix}Luis Alberto Nuñez Reyes
+${licensePrefix}Roiner Andres Piedra Madrigal
+${licensePrefix}Fabian Andres Vargas Chavarria
+${licensePrefix}
+${licensePrefix}Royal Battle
+${licensePrefix}Tercer cuatrimestre, 2016
+<#if licenseLast??>
+${licenseLast}
+</#if>
